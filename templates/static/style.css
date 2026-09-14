@@ -1,3 +1,7 @@
+/* =========================================================
+   RESET
+========================================================= */
+
 * {
     margin: 0;
     padding: 0;
@@ -11,19 +15,31 @@ html {
 
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
 
     background: #080b12;
 
-    color: #ffffff;
+    color: white;
 
-    min-height: 100vh;
+    line-height: 1.6;
 }
 
 
-/* =========================
-   HEADER
-========================= */
+button,
+input {
+
+    font-family: inherit;
+
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
 
 header {
 
@@ -34,7 +50,7 @@ header {
 
     width: 100%;
 
-    height: 75px;
+    height: 76px;
 
     display: flex;
 
@@ -44,9 +60,9 @@ header {
 
     padding: 0 8%;
 
-    background: rgba(8, 11, 18, 0.9);
+    background: rgba(8, 11, 18, 0.88);
 
-    backdrop-filter: blur(15px);
+    backdrop-filter: blur(16px);
 
     border-bottom: 1px solid #1b2230;
 
@@ -67,6 +83,7 @@ header {
 .logo span {
 
     color: #6c63ff;
+
 }
 
 
@@ -74,31 +91,32 @@ nav {
 
     display: flex;
 
-    gap: 35px;
+    gap: 32px;
 }
 
 
 nav a {
 
-    color: #8d95a7;
+    color: #858da0;
 
     text-decoration: none;
 
     font-size: 14px;
 
-    transition: 0.3s;
+    transition: 0.25s;
 }
 
 
 nav a:hover {
 
     color: white;
+
 }
 
 
-/* =========================
+/* =========================================================
    HERO
-========================= */
+========================================================= */
 
 .hero {
 
@@ -108,13 +126,13 @@ nav a:hover {
 
     align-items: center;
 
-    padding: 100px 8%;
+    padding: 120px 8%;
 
     background:
 
         radial-gradient(
-            circle at 70% 40%,
-            rgba(108, 99, 255, 0.15),
+            circle at 75% 35%,
+            rgba(108, 99, 255, 0.18),
             transparent 35%
         );
 }
@@ -122,33 +140,35 @@ nav a:hover {
 
 .hero-content {
 
-    max-width: 800px;
+    max-width: 850px;
+
 }
 
 
-.tag {
+.eyebrow {
 
     color: #6c63ff;
 
-    font-size: 12px;
+    font-size: 11px;
 
-    font-weight: 700;
+    font-weight: 800;
 
     letter-spacing: 3px;
 
-    margin-bottom: 20px;
+    margin-bottom: 18px;
 }
 
 
 .hero h1 {
 
-    font-size: clamp(50px, 7vw, 90px);
+    font-size: clamp(55px, 8vw, 100px);
 
     line-height: 0.95;
 
-    letter-spacing: -4px;
+    letter-spacing: -5px;
 
     margin-bottom: 30px;
+
 }
 
 
@@ -157,56 +177,59 @@ nav a:hover {
     display: block;
 
     color: #6c63ff;
+
 }
 
 
-.description {
+.hero-description {
 
-    max-width: 600px;
+    max-width: 620px;
 
-    color: #8d95a7;
+    color: #858da0;
 
     font-size: 18px;
 
-    line-height: 1.7;
+    line-height: 1.8;
 
     margin-bottom: 35px;
 }
 
 
-.hero-button {
+.primary-button {
 
     display: inline-block;
 
     padding: 14px 25px;
 
-    background: #6c63ff;
-
     color: white;
+
+    background: #6c63ff;
 
     text-decoration: none;
 
-    font-weight: 700;
-
     border-radius: 6px;
 
-    transition: 0.3s;
+    font-weight: 700;
+
+    transition: 0.25s;
 }
 
 
-.hero-button:hover {
+.primary-button:hover {
 
     transform: translateY(-3px);
 
-    box-shadow: 0 15px 35px rgba(108, 99, 255, 0.25);
+    box-shadow:
+        0 15px 40px
+        rgba(108, 99, 255, 0.25);
 }
 
 
-/* =========================
-   VISUALIZER
-========================= */
+/* =========================================================
+   SECTIONS
+========================================================= */
 
-.visualizer {
+.section {
 
     padding: 120px 8%;
 
@@ -214,59 +237,55 @@ nav a:hover {
 }
 
 
-.section-heading {
+.section-header {
 
     margin-bottom: 45px;
 }
 
 
-.section-heading p {
+.section-header h2 {
 
-    color: #6c63ff;
+    font-size: clamp(40px, 5vw, 62px);
 
-    font-size: 12px;
-
-    letter-spacing: 3px;
-
-    font-weight: 700;
+    letter-spacing: -3px;
 
     margin-bottom: 10px;
 }
 
 
-.section-heading h2 {
+.section-header > p:last-child {
 
-    font-size: 48px;
+    color: #858da0;
 
-    letter-spacing: -2px;
 }
 
 
-/* =========================
-   CONTROLS
-========================= */
+/* =========================================================
+   ALGORITHM CONTROLS
+========================================================= */
 
-.controls {
+.algorithm-controls {
 
     display: flex;
 
-    gap: 12px;
-
     flex-wrap: wrap;
 
-    margin-bottom: 45px;
+    gap: 10px;
+
+    margin-bottom: 35px;
 }
 
 
-.controls button {
+.algorithm-controls button,
+.structure-controls button {
 
-    border: 1px solid #2a3242;
+    border: 1px solid #293244;
 
-    background: #101520;
+    background: #101620;
 
     color: white;
 
-    padding: 12px 20px;
+    padding: 11px 17px;
 
     border-radius: 6px;
 
@@ -276,7 +295,8 @@ nav a:hover {
 }
 
 
-.controls button:hover {
+.algorithm-controls button:hover,
+.structure-controls button:hover {
 
     background: #6c63ff;
 
@@ -286,15 +306,32 @@ nav a:hover {
 }
 
 
-/* =========================
-   ARRAY
-========================= */
+.secondary-button {
+
+    border-color: #42d392 !important;
+
+}
+
+
+/* =========================================================
+   ARRAY VISUALIZER
+========================================================= */
+
+.visual-card {
+
+    background: #0d121c;
+
+    border: 1px solid #1c2534;
+
+    border-radius: 10px;
+
+    padding: 35px;
+}
+
 
 .array-container {
 
-    min-height: 400px;
-
-    padding: 35px;
+    height: 390px;
 
     display: flex;
 
@@ -303,12 +340,6 @@ nav a:hover {
     justify-content: center;
 
     gap: 12px;
-
-    background: #0d121c;
-
-    border: 1px solid #1b2230;
-
-    border-radius: 10px;
 }
 
 
@@ -332,13 +363,13 @@ nav a:hover {
 
     position: absolute;
 
-    top: -25px;
+    top: -27px;
 
     left: 50%;
 
     transform: translateX(-50%);
 
-    color: #8d95a7;
+    color: #8e97a8;
 
     font-size: 12px;
 }
@@ -346,53 +377,473 @@ nav a:hover {
 
 .compare {
 
-    background: #ffb84d;
+    background: #ffb84d !important;
+
 }
 
 
 .swap {
 
-    background: #ff5c77;
+    background: #ff5c77 !important;
+
 }
 
 
 .found {
 
-    background: #42d392;
+    background: #42d392 !important;
+
 }
 
 
 .status {
 
-    margin-top: 20px;
+    padding-top: 25px;
 
-    color: #8d95a7;
+    color: #8e97a8;
 
     font-size: 14px;
+
+    border-top: 1px solid #1b2230;
+
 }
 
 
-/* =========================
+/* =========================================================
+   COMPLEXITY
+========================================================= */
+
+.complexity-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 12px;
+
+    margin-top: 15px;
+}
+
+
+.complexity-card {
+
+    padding: 22px;
+
+    background: #0d121c;
+
+    border: 1px solid #1c2534;
+
+    border-radius: 8px;
+}
+
+
+.complexity-card span {
+
+    display: block;
+
+    color: #858da0;
+
+    font-size: 13px;
+
+    margin-bottom: 5px;
+}
+
+
+.complexity-card strong {
+
+    font-size: 22px;
+
+    color: #6c63ff;
+}
+
+
+/* =========================================================
+   STRUCTURES
+========================================================= */
+
+.structures {
+
+    background: #090d15;
+}
+
+
+.structure-card {
+
+    display: grid;
+
+    grid-template-columns:
+        320px 1fr;
+
+    gap: 60px;
+
+    padding: 40px;
+
+    margin-bottom: 20px;
+
+    background: #0d121c;
+
+    border: 1px solid #1c2534;
+
+    border-radius: 10px;
+}
+
+
+.structure-number {
+
+    color: #6c63ff;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    font-weight: 800;
+}
+
+
+.structure-info h3 {
+
+    font-size: 32px;
+
+    margin: 8px 0;
+
+}
+
+
+.structure-info > p {
+
+    color: #858da0;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================================================
+   STRUCTURE CONTROLS
+========================================================= */
+
+.structure-controls {
+
+    display: flex;
+
+    gap: 8px;
+
+    flex-wrap: wrap;
+}
+
+
+.structure-controls input {
+
+    width: 90px;
+
+    padding: 11px;
+
+    background: #080b12;
+
+    color: white;
+
+    border: 1px solid #293244;
+
+    border-radius: 6px;
+
+    outline: none;
+}
+
+
+.structure-controls input:focus {
+
+    border-color: #6c63ff;
+
+}
+
+
+/* =========================================================
+   STACK
+========================================================= */
+
+.stack-visual {
+
+    min-height: 280px;
+
+    display: flex;
+
+    flex-direction: column-reverse;
+
+    align-items: center;
+
+    justify-content: flex-start;
+
+    gap: 7px;
+
+    padding: 20px;
+
+    border: 1px dashed #293244;
+
+    border-radius: 8px;
+}
+
+
+.stack-node {
+
+    width: 180px;
+
+    padding: 13px;
+
+    text-align: center;
+
+    background: #6c63ff;
+
+    border-radius: 5px;
+
+    font-weight: 700;
+
+    animation: appear 0.25s ease;
+}
+
+
+/* =========================================================
+   QUEUE
+========================================================= */
+
+.queue-visual {
+
+    min-height: 150px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    overflow-x: auto;
+
+    padding: 25px;
+
+    border: 1px dashed #293244;
+
+    border-radius: 8px;
+}
+
+
+.queue-node {
+
+    min-width: 75px;
+
+    padding: 16px;
+
+    text-align: center;
+
+    background: #6c63ff;
+
+    border-radius: 5px;
+
+    font-weight: 700;
+
+    animation: appear 0.25s ease;
+}
+
+
+/* =========================================================
+   LINKED LIST
+========================================================= */
+
+.linked-list-visual {
+
+    min-height: 150px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    padding: 25px;
+
+    border: 1px dashed #293244;
+
+    border-radius: 8px;
+}
+
+
+.list-node {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+.node-box {
+
+    min-width: 70px;
+
+    padding: 15px;
+
+    text-align: center;
+
+    background: #6c63ff;
+
+    border-radius: 5px;
+
+    font-weight: 700;
+}
+
+
+.arrow {
+
+    color: #6c63ff;
+
+    font-size: 20px;
+
+}
+
+
+.null-node {
+
+    color: #858da0;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   BINARY TREE
+========================================================= */
+
+.tree-card {
+
+    min-height: 500px;
+}
+
+
+.tree-visual {
+
+    min-height: 350px;
+
+    position: relative;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: flex-start;
+
+    padding: 30px;
+
+    border: 1px dashed #293244;
+
+    border-radius: 8px;
+
+    overflow: auto;
+}
+
+
+.tree-node {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+}
+
+
+.tree-circle {
+
+    width: 50px;
+
+    height: 50px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #6c63ff;
+
+    border: 3px solid #9a94ff;
+
+    border-radius: 50%;
+
+    font-weight: 700;
+
+    z-index: 2;
+}
+
+
+.tree-children {
+
+    display: flex;
+
+    gap: 70px;
+
+    margin-top: 40px;
+
+}
+
+
+.tree-child {
+
+    position: relative;
+}
+
+
+.tree-child::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 50px;
+
+    height: 1px;
+
+    background: #424c60;
+
+    top: -20px;
+
+    left: 50%;
+
+}
+
+
+.empty-tree {
+
+    color: #858da0;
+
+    margin-top: 100px;
+}
+
+
+/* =========================================================
    ABOUT
-========================= */
+========================================================= */
 
 .about {
 
     padding: 120px 8%;
 
-    border-top: 1px solid #1b2230;
-
     display: grid;
 
     grid-template-columns: 1fr 1fr;
 
-    gap: 80px;
+    gap: 100px;
+
+    border-top: 1px solid #1b2230;
 }
 
 
 .about h2 {
 
-    font-size: 55px;
+    font-size: clamp(40px, 5vw, 65px);
 
     line-height: 1;
 
@@ -400,113 +851,153 @@ nav a:hover {
 }
 
 
-.about > p {
+.about-text {
 
-    color: #8d95a7;
+    color: #858da0;
 
-    font-size: 18px;
+    font-size: 17px;
 
     line-height: 1.8;
-
-    align-self: center;
 }
 
 
-/* =========================
+.about-text p {
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================================================
    FOOTER
-========================= */
+========================================================= */
 
 footer {
-
-    padding: 30px 8%;
-
-    border-top: 1px solid #1b2230;
 
     display: flex;
 
     justify-content: space-between;
 
-    color: #646d7e;
+    padding: 30px 8%;
+
+    border-top: 1px solid #1b2230;
+
+    color: #626b7c;
 
     font-size: 13px;
 }
 
 
-/* =========================
-   RESPONSIVE
-========================= */
+/* =========================================================
+   ANIMATION
+========================================================= */
 
-@media (max-width: 700px) {
+@keyframes appear {
 
-    header {
+    from {
 
-        padding: 0 5%;
+        opacity: 0;
+
+        transform: scale(0.8);
+
     }
 
+    to {
+
+        opacity: 1;
+
+        transform: scale(1);
+
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 850px) {
 
     nav {
 
         display: none;
+
     }
 
 
-    .hero {
+    .complexity-grid {
 
-        padding: 100px 5%;
+        grid-template-columns:
+            repeat(2, 1fr);
+
     }
 
 
-    .hero h1 {
+    .structure-card {
 
-        letter-spacing: -3px;
-    }
+        grid-template-columns: 1fr;
 
+        gap: 30px;
 
-    .visualizer {
-
-        padding: 80px 5%;
-    }
-
-
-    .array-container {
-
-        min-height: 300px;
-
-        padding: 25px 10px;
-
-        gap: 5px;
-    }
-
-
-    .bar {
-
-        width: 25px;
     }
 
 
     .about {
 
-        padding: 80px 5%;
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .hero,
+    .section,
+    .about {
+
+        padding-left: 5%;
+
+        padding-right: 5%;
+
+    }
+
+
+    .array-container {
+
+        gap: 5px;
+
+    }
+
+
+    .bar {
+
+        width: 23px;
+
+    }
+
+
+    .complexity-grid {
 
         grid-template-columns: 1fr;
 
-        gap: 35px;
     }
 
 
-    .about h2 {
+    .structure-card {
 
-        font-size: 42px;
+        padding: 25px;
+
     }
 
 
-    footer {
+    .array-container {
 
-        padding: 25px 5%;
+        height: 300px;
 
-        flex-direction: column;
-
-        gap: 10px;
     }
 
 }
