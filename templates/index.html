@@ -15,7 +15,13 @@
 
 </head>
 
+
 <body>
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
 
 <header>
 
@@ -26,37 +32,54 @@
     <nav>
 
         <a href="#home">Home</a>
-        <a href="#visualizer">Visualizer</a>
-        <a href="#about">About</a>
+
+        <a href="#algorithms">
+            Algorithms
+        </a>
+
+        <a href="#structures">
+            Data Structures
+        </a>
+
+        <a href="#about">
+            About
+        </a>
 
     </nav>
 
 </header>
 
 
-<main>
+<!-- =====================================================
+     HERO
+===================================================== -->
 
 <section class="hero" id="home">
 
     <div class="hero-content">
 
-        <p class="tag">
+        <p class="eyebrow">
             PYTHON • DSA • ALGORITHMS
         </p>
 
         <h1>
-            Understand Algorithms
+            Learn DSA
             <span>Visually.</span>
         </h1>
 
-        <p class="description">
-            An interactive data structures and algorithms
-            visualizer built with Python, Flask and modern
-            web technologies.
+        <p class="hero-description">
+
+            Explore algorithms and data structures through
+            interactive visualizations powered by Python
+            and Flask.
+
         </p>
 
-        <a href="#visualizer" class="hero-button">
-            Start Visualizing
+        <a href="#algorithms"
+           class="primary-button">
+
+            Start Exploring
+
         </a>
 
     </div>
@@ -64,92 +87,420 @@
 </section>
 
 
-<section class="visualizer" id="visualizer">
+<!-- =====================================================
+     ALGORITHMS
+===================================================== -->
 
-    <div class="section-heading">
+<section class="section" id="algorithms">
 
-        <p>ALGORITHM LAB</p>
+    <div class="section-header">
 
-        <h2>Algorithm Visualizer</h2>
+        <p class="eyebrow">
+            ALGORITHM LAB
+        </p>
+
+        <h2>
+            Sorting & Searching
+        </h2>
+
+        <p>
+            Watch algorithms operate step-by-step.
+        </p>
 
     </div>
 
 
-    <div class="controls">
+    <!-- CONTROLS -->
+
+    <div class="algorithm-controls">
 
         <button onclick="bubbleSort()">
             Bubble Sort
+        </button>
+
+        <button onclick="selectionSort()">
+            Selection Sort
+        </button>
+
+        <button onclick="insertionSort()">
+            Insertion Sort
         </button>
 
         <button onclick="linearSearch()">
             Linear Search
         </button>
 
-        <button onclick="generateArray()">
+        <button onclick="binarySearch()">
+            Binary Search
+        </button>
+
+        <button onclick="generateArray()"
+                class="secondary-button">
+
             Generate Array
+
         </button>
 
     </div>
 
 
-    <div class="array-container" id="array">
+    <!-- ARRAY -->
 
-        <!-- Bars generated using JavaScript -->
+    <div class="visual-card">
+
+        <div id="array"
+             class="array-container">
+        </div>
+
+        <div id="status"
+             class="status">
+
+            Choose an algorithm to begin.
+
+        </div>
 
     </div>
 
 
-    <div class="status" id="status">
-        Choose an algorithm to begin.
+    <!-- COMPLEXITY -->
+
+    <div class="complexity-grid">
+
+        <div class="complexity-card">
+
+            <span>Bubble Sort</span>
+
+            <strong>O(n²)</strong>
+
+        </div>
+
+
+        <div class="complexity-card">
+
+            <span>Selection Sort</span>
+
+            <strong>O(n²)</strong>
+
+        </div>
+
+
+        <div class="complexity-card">
+
+            <span>Insertion Sort</span>
+
+            <strong>O(n²)</strong>
+
+        </div>
+
+
+        <div class="complexity-card">
+
+            <span>Binary Search</span>
+
+            <strong>O(log n)</strong>
+
+        </div>
+
     </div>
 
 </section>
 
 
-<section class="about" id="about">
+<!-- =====================================================
+     DATA STRUCTURES
+===================================================== -->
 
-    <div>
+<section class="section structures"
+         id="structures">
 
-        <p class="tag">
-            ABOUT THE PROJECT
+
+    <div class="section-header">
+
+        <p class="eyebrow">
+            DATA STRUCTURE LAB
         </p>
 
         <h2>
-            Learn by seeing
-            the algorithm work.
+            Build Data Structures
+        </h2>
+
+        <p>
+            Insert, remove and search elements interactively.
+        </p>
+
+    </div>
+
+
+    <!-- =================================================
+         STACK
+    ================================================= -->
+
+    <div class="structure-card">
+
+        <div class="structure-info">
+
+            <span class="structure-number">
+                01
+            </span>
+
+            <h3>
+                Stack
+            </h3>
+
+            <p>
+                Last In, First Out — LIFO
+            </p>
+
+            <div class="structure-controls">
+
+                <input
+                    id="stackInput"
+                    type="number"
+                    placeholder="Value">
+
+                <button onclick="pushStack()">
+                    Push
+                </button>
+
+                <button onclick="popStack()">
+                    Pop
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="stack-visual"
+             id="stack">
+
+        </div>
+
+    </div>
+
+
+    <!-- =================================================
+         QUEUE
+    ================================================= -->
+
+    <div class="structure-card">
+
+        <div class="structure-info">
+
+            <span class="structure-number">
+                02
+            </span>
+
+            <h3>
+                Queue
+            </h3>
+
+            <p>
+                First In, First Out — FIFO
+            </p>
+
+            <div class="structure-controls">
+
+                <input
+                    id="queueInput"
+                    type="number"
+                    placeholder="Value">
+
+                <button onclick="enqueue()">
+                    Enqueue
+                </button>
+
+                <button onclick="dequeue()">
+                    Dequeue
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="queue-visual"
+             id="queue">
+
+        </div>
+
+    </div>
+
+
+    <!-- =================================================
+         LINKED LIST
+    ================================================= -->
+
+    <div class="structure-card">
+
+        <div class="structure-info">
+
+            <span class="structure-number">
+                03
+            </span>
+
+            <h3>
+                Linked List
+            </h3>
+
+            <p>
+                Nodes connected using links.
+            </p>
+
+            <div class="structure-controls">
+
+                <input
+                    id="listInput"
+                    type="number"
+                    placeholder="Value">
+
+                <button onclick="insertLinkedList()">
+                    Insert
+                </button>
+
+                <button onclick="deleteLinkedList()">
+                    Delete
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="linked-list-visual"
+             id="linkedList">
+
+        </div>
+
+    </div>
+
+
+    <!-- =================================================
+         BINARY TREE
+    ================================================= -->
+
+    <div class="structure-card tree-card">
+
+        <div class="structure-info">
+
+            <span class="structure-number">
+                04
+            </span>
+
+            <h3>
+                Binary Search Tree
+            </h3>
+
+            <p>
+                Left values are smaller.
+                Right values are larger.
+            </p>
+
+            <div class="structure-controls">
+
+                <input
+                    id="treeInput"
+                    type="number"
+                    placeholder="Value">
+
+                <button onclick="insertTree()">
+                    Insert
+                </button>
+
+                <button onclick="searchTree()">
+                    Search
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="tree-visual"
+             id="tree">
+
+            <p class="empty-tree">
+                Insert values to build the tree.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     ABOUT
+===================================================== -->
+
+<section class="about"
+         id="about">
+
+    <div>
+
+        <p class="eyebrow">
+            ABOUT
+        </p>
+
+        <h2>
+            Understand the
+            logic behind the code.
         </h2>
 
     </div>
 
-    <p>
 
-        AlgoVision converts algorithm operations into
-        interactive visualizations. Instead of only reading
-        about sorting and searching algorithms, you can
-        watch comparisons, swaps and results happen
-        step-by-step.
+    <div class="about-text">
 
-    </p>
+        <p>
+
+            AlgoVision transforms traditional DSA concepts
+            into interactive visualizations.
+
+        </p>
+
+        <p>
+
+            The backend is written in Python using Flask,
+            while HTML, CSS and JavaScript create the
+            interactive interface.
+
+        </p>
+
+        <p>
+
+            The project demonstrates sorting algorithms,
+            searching algorithms and fundamental data
+            structures.
+
+        </p>
+
+    </div>
 
 </section>
 
-</main>
 
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 
 <footer>
 
-    <p>
+    <span>
         AlgoVision © 2026
-    </p>
+    </span>
 
-    <p>
-        Built with Python + Flask
-    </p>
+    <span>
+        Python • Flask • DSA • JavaScript
+    </span>
 
 </footer>
 
 
-<script src="{{ url_for('static', filename='script.js') }}"></script>
+<script src="{{ url_for('static', filename='script.js') }}">
+</script>
+
 
 </body>
 
